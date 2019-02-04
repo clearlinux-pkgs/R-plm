@@ -4,17 +4,15 @@
 #
 Name     : R-plm
 Version  : 1.7.0
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Summary  : Linear Models for Panel Data
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Formula
-Requires: R-lmtest
-Requires: R-maxLik
-Requires: R-texreg
+Requires: R-bdsmatrix
 BuildRequires : R-Formula
+BuildRequires : R-bdsmatrix
 BuildRequires : R-lmtest
 BuildRequires : R-maxLik
 BuildRequires : R-texreg
@@ -31,10 +29,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549255063
+export SOURCE_DATE_EPOCH=1549271609
 
 %install
-export SOURCE_DATE_EPOCH=1549255063
+export SOURCE_DATE_EPOCH=1549271609
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
