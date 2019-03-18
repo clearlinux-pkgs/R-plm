@@ -4,16 +4,17 @@
 #
 Name     : R-plm
 Version  : 1.7.0
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Summary  : Linear Models for Panel Data
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-bdsmatrix
+Requires: R-markdown
 BuildRequires : R-Formula
 BuildRequires : R-bdsmatrix
 BuildRequires : R-lmtest
+BuildRequires : R-markdown
 BuildRequires : R-maxLik
 BuildRequires : R-texreg
 BuildRequires : buildreq-R
@@ -29,10 +30,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549271609
+export SOURCE_DATE_EPOCH=1552875087
 
 %install
-export SOURCE_DATE_EPOCH=1549271609
+export SOURCE_DATE_EPOCH=1552875087
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -68,8 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library plm|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  plm || :
 
 
 %files
@@ -116,3 +116,92 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/plm/help/plm.rdx
 /usr/lib64/R/library/plm/html/00Index.html
 /usr/lib64/R/library/plm/html/R.css
+/usr/lib64/R/library/plm/tests/Examples/plm-Ex.Rout.save
+/usr/lib64/R/library/plm/tests/test_Chow.R
+/usr/lib64/R/library/plm/tests/test_Chow.Rout.save
+/usr/lib64/R/library/plm/tests/test_Errors.R
+/usr/lib64/R/library/plm/tests/test_Errors.Rout.save
+/usr/lib64/R/library/plm/tests/test_Estimators.R
+/usr/lib64/R/library/plm/tests/test_Estimators.Rout.save
+/usr/lib64/R/library/plm/tests/test_Evaluation.R
+/usr/lib64/R/library/plm/tests/test_Evaluation.Rout.save
+/usr/lib64/R/library/plm/tests/test_FD_models.R
+/usr/lib64/R/library/plm/tests/test_FD_models.Rout.save
+/usr/lib64/R/library/plm/tests/test_IV.R
+/usr/lib64/R/library/plm/tests/test_IV.Rout.save
+/usr/lib64/R/library/plm/tests/test_R2_adj_R2.R
+/usr/lib64/R/library/plm/tests/test_as.data.frame_as.matrix.R
+/usr/lib64/R/library/plm/tests/test_as.list.pdata.frame.R
+/usr/lib64/R/library/plm/tests/test_clubSandwich_interoperability.R
+/usr/lib64/R/library/plm/tests/test_clubSandwich_interoperability.Rout.save
+/usr/lib64/R/library/plm/tests/test_detect_lin_dep_alias.R
+/usr/lib64/R/library/plm/tests/test_fitted.plm.R
+/usr/lib64/R/library/plm/tests/test_fixef.R
+/usr/lib64/R/library/plm/tests/test_fixef_comp_lm_plm.R
+/usr/lib64/R/library/plm/tests/test_groupGenerics_pseries.R
+/usr/lib64/R/library/plm/tests/test_groupGenerics_pseries.Rout.save
+/usr/lib64/R/library/plm/tests/test_is.pconsecutive.R
+/usr/lib64/R/library/plm/tests/test_lag_lead.R
+/usr/lib64/R/library/plm/tests/test_lag_lead.Rout.save
+/usr/lib64/R/library/plm/tests/test_lagt_leadt.R
+/usr/lib64/R/library/plm/tests/test_lagt_leadt.Rout.save
+/usr/lib64/R/library/plm/tests/test_make.pconsecutive_pbalanced.R
+/usr/lib64/R/library/plm/tests/test_misc.R
+/usr/lib64/R/library/plm/tests/test_model.frame.R
+/usr/lib64/R/library/plm/tests/test_model.matrix_effects.R
+/usr/lib64/R/library/plm/tests/test_model.matrix_pmodel.response.R
+/usr/lib64/R/library/plm/tests/test_model.matrix_pmodel.response_NA.R
+/usr/lib64/R/library/plm/tests/test_nested.R
+/usr/lib64/R/library/plm/tests/test_nested.Rout.save
+/usr/lib64/R/library/plm/tests/test_pFtest.R
+/usr/lib64/R/library/plm/tests/test_pFtest.Rout.save
+/usr/lib64/R/library/plm/tests/test_pbgtest.R
+/usr/lib64/R/library/plm/tests/test_pbnftest.R
+/usr/lib64/R/library/plm/tests/test_pbnftest.Rout.save
+/usr/lib64/R/library/plm/tests/test_pbsytest_unbalanced.R
+/usr/lib64/R/library/plm/tests/test_pbsytest_unbalanced.Rout.save
+/usr/lib64/R/library/plm/tests/test_pcdtest.R
+/usr/lib64/R/library/plm/tests/test_pdata.frame_const_allNA_nonfinite.R
+/usr/lib64/R/library/plm/tests/test_pdata.frame_extract_class_est_mod.R
+/usr/lib64/R/library/plm/tests/test_pdata.frame_id_index_more.R
+/usr/lib64/R/library/plm/tests/test_pdata.frame_print_duplicated_rownames.R
+/usr/lib64/R/library/plm/tests/test_pdata.frame_subsetting.R
+/usr/lib64/R/library/plm/tests/test_pdata.frame_subsetting.Rout.save
+/usr/lib64/R/library/plm/tests/test_pdata.frame_unused_levels.R
+/usr/lib64/R/library/plm/tests/test_pdiff_fd.R
+/usr/lib64/R/library/plm/tests/test_pdwtest.R
+/usr/lib64/R/library/plm/tests/test_pggls.R
+/usr/lib64/R/library/plm/tests/test_pgmm.R
+/usr/lib64/R/library/plm/tests/test_pgmm.Rout.save
+/usr/lib64/R/library/plm/tests/test_pgrangertest.R
+/usr/lib64/R/library/plm/tests/test_pgrangertest.Rout.save
+/usr/lib64/R/library/plm/tests/test_pht.R
+/usr/lib64/R/library/plm/tests/test_pht.Rout.save
+/usr/lib64/R/library/plm/tests/test_phtest_Hausman_regression.R
+/usr/lib64/R/library/plm/tests/test_phtest_Hausman_regression.Rout.save
+/usr/lib64/R/library/plm/tests/test_plm.data.R
+/usr/lib64/R/library/plm/tests/test_plm_na.action.R
+/usr/lib64/R/library/plm/tests/test_plmtest_unbalanced.R
+/usr/lib64/R/library/plm/tests/test_plmtest_unbalanced.Rout.save
+/usr/lib64/R/library/plm/tests/test_preserve_rownames.R
+/usr/lib64/R/library/plm/tests/test_pseries_subsetting.R
+/usr/lib64/R/library/plm/tests/test_punbalancedness.R
+/usr/lib64/R/library/plm/tests/test_purtest.R
+/usr/lib64/R/library/plm/tests/test_purtest.Rout.save
+/usr/lib64/R/library/plm/tests/test_pvar.R
+/usr/lib64/R/library/plm/tests/test_pvcm.R
+/usr/lib64/R/library/plm/tests/test_pvcm.Rout.save
+/usr/lib64/R/library/plm/tests/test_pwaldtest.R
+/usr/lib64/R/library/plm/tests/test_pwaldtest.Rout.save
+/usr/lib64/R/library/plm/tests/test_pwaldtest_vcovG_attr_cluster.R
+/usr/lib64/R/library/plm/tests/test_pwaldtest_vcovG_attr_cluster.Rout.save
+/usr/lib64/R/library/plm/tests/test_pwfdtest_pwartest.R
+/usr/lib64/R/library/plm/tests/test_pwtest.R
+/usr/lib64/R/library/plm/tests/test_ranef.R
+/usr/lib64/R/library/plm/tests/test_ranef.Rout.save
+/usr/lib64/R/library/plm/tests/test_residuals_overall_fitted_exp.R
+/usr/lib64/R/library/plm/tests/test_summary.plm_vcov.R
+/usr/lib64/R/library/plm/tests/test_summary.pseries_character_logical_factor.R
+/usr/lib64/R/library/plm/tests/test_vcovG_lin_dep.R
+/usr/lib64/R/library/plm/tests/test_within_intercept.R
+/usr/lib64/R/library/plm/tests/test_within_intercept.Rout.save
