@@ -1,7 +1,9 @@
 1.7.0
 R-Formula
 R-bdsmatrix
+R-car
 R-lmtest
 R-markdown
 R-maxLik
 R-texreg
+R-zoo
