@@ -4,7 +4,7 @@
 #
 Name     : R-plm
 Version  : 1.7.0
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Summary  : Linear Models for Panel Data
@@ -31,10 +31,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556476542
+export SOURCE_DATE_EPOCH=1556479158
 
 %install
-export SOURCE_DATE_EPOCH=1556476542
+export SOURCE_DATE_EPOCH=1556479158
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
