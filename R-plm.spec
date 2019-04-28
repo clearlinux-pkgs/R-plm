@@ -4,7 +4,7 @@
 #
 Name     : R-plm
 Version  : 1.7.0
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Summary  : Linear Models for Panel Data
