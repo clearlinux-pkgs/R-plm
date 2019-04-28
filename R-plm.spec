@@ -4,14 +4,12 @@
 #
 Name     : R-plm
 Version  : 1.7.0
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plm_1.7-0.tar.gz
 Summary  : Linear Models for Panel Data
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-car
-Requires: R-zoo
 BuildRequires : R-Formula
 BuildRequires : R-bdsmatrix
 BuildRequires : R-car
@@ -33,10 +31,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552885012
+export SOURCE_DATE_EPOCH=1556476542
 
 %install
-export SOURCE_DATE_EPOCH=1552885012
+export SOURCE_DATE_EPOCH=1556476542
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  plm || :
+R CMD check --no-manual --no-examples --no-codoc plm || :
 
 
 %files
