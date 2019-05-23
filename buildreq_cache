@@ -1,10 +1,12 @@
-2.0.0
+2.0.1
 R-Formula
 R-Rdpack
 R-bdsmatrix
 R-car
+R-evaluate
 R-lmtest
 R-markdown
 R-maxLik
+R-pder
 R-texreg
 R-zoo
