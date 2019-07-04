@@ -4,29 +4,25 @@
 #
 Name     : R-plm
 Version  : 2.0.2
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/plm_2.0-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plm_2.0-2.tar.gz
 Summary  : Linear Models for Panel Data
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-AER
 Requires: R-Formula
 Requires: R-Rdpack
 Requires: R-bdsmatrix
 Requires: R-lmtest
 Requires: R-maxLik
 Requires: R-sandwich
-Requires: R-texreg
 Requires: R-zoo
-BuildRequires : R-AER
 BuildRequires : R-Formula
 BuildRequires : R-Rdpack
 BuildRequires : R-bdsmatrix
 BuildRequires : R-lmtest
 BuildRequires : R-maxLik
 BuildRequires : R-sandwich
-BuildRequires : R-texreg
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
@@ -41,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562045975
+export SOURCE_DATE_EPOCH=1562206582
 
 %install
-export SOURCE_DATE_EPOCH=1562045975
+export SOURCE_DATE_EPOCH=1562206582
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
