@@ -4,7 +4,7 @@
 #
 Name     : R-plm
 Version  : 2.2.3
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/plm_2.2-3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/plm_2.2-3.tar.gz
 Summary  : Linear Models for Panel Data
@@ -13,16 +13,20 @@ License  : GPL-2.0+
 Requires: R-Formula
 Requires: R-Rdpack
 Requires: R-bdsmatrix
+Requires: R-car
 Requires: R-lmtest
 Requires: R-maxLik
 Requires: R-sandwich
+Requires: R-texreg
 Requires: R-zoo
 BuildRequires : R-Formula
 BuildRequires : R-Rdpack
 BuildRequires : R-bdsmatrix
+BuildRequires : R-car
 BuildRequires : R-lmtest
 BuildRequires : R-maxLik
 BuildRequires : R-sandwich
+BuildRequires : R-texreg
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
@@ -31,21 +35,22 @@ No detailed description available
 
 %prep
 %setup -q -c -n plm
+cd %{_builddir}/plm
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583166495
+export SOURCE_DATE_EPOCH=1589749139
 
 %install
-export SOURCE_DATE_EPOCH=1583166495
+export SOURCE_DATE_EPOCH=1589749139
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
