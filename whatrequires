@@ -1,2 +1,3 @@
 # This file contains recursive sources that require this package
-R-Ecdat
+R-AER
+R-wooldridge
